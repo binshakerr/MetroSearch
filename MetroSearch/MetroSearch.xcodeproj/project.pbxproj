@@ -14,6 +14,8 @@
 		DC659D3C273BF75900F67A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */; };
 		DC659D47273BF75900F67A5B /* MetroSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D46273BF75900F67A5B /* MetroSearchTests.swift */; };
 		DC659D6C273BFEAF00F67A5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D6B273BFEAF00F67A5B /* SearchViewController.swift */; };
+		DC659D6F273C031700F67A5B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D6E273C031700F67A5B /* SearchResult.swift */; };
+		DC659D71273C037C00F67A5B /* MuseumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D70273C037C00F67A5B /* MuseumItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		DC659D42273BF75900F67A5B /* MetroSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC659D46273BF75900F67A5B /* MetroSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSearchTests.swift; sourceTree = "<group>"; };
 		DC659D6B273BFEAF00F67A5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DC659D6E273C031700F67A5B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		DC659D70273C037C00F67A5B /* MuseumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumItem.swift; sourceTree = "<group>"; };
 		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 		DC659D61273BFCEB00F67A5B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D6D273C02F600F67A5B /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -217,6 +222,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC659D6D273C02F600F67A5B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DC659D6E273C031700F67A5B /* SearchResult.swift */,
+				DC659D70273C037C00F67A5B /* MuseumItem.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC659D6C273BFEAF00F67A5B /* SearchViewController.swift in Sources */,
+				DC659D6F273C031700F67A5B /* SearchResult.swift in Sources */,
+				DC659D71273C037C00F67A5B /* MuseumItem.swift in Sources */,
 				DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
