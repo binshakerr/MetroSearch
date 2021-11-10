@@ -28,6 +28,9 @@
 		DC659D8C273C0A2200F67A5B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D88273C0A2200F67A5B /* UIViewController+Extensions.swift */; };
 		DC659D8D273C0A2200F67A5B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D89273C0A2200F67A5B /* UIView+Extensions.swift */; };
 		DC659D8E273C0A2200F67A5B /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D8A273C0A2200F67A5B /* UIView+AutoLayout.swift */; };
+		DC659D91273C0A9700F67A5B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D90273C0A9700F67A5B /* SearchViewModel.swift */; };
+		DC659D94273C163400F67A5B /* ObjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D92273C163400F67A5B /* ObjectDetailsViewController.swift */; };
+		DC659D95273C163400F67A5B /* ObjectDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC659D93273C163400F67A5B /* ObjectDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		DC659D88273C0A2200F67A5B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DC659D89273C0A2200F67A5B /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DC659D8A273C0A2200F67A5B /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		DC659D90273C0A9700F67A5B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DC659D92273C163400F67A5B /* ObjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailsViewController.swift; sourceTree = "<group>"; };
+		DC659D93273C163400F67A5B /* ObjectDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectDetailsViewController.xib; sourceTree = "<group>"; };
 		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +241,7 @@
 		DC659D68273BFE7700F67A5B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D90273C0A9700F67A5B /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +249,8 @@
 		DC659D69273BFE8200F67A5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D92273C163400F67A5B /* ObjectDetailsViewController.swift */,
+				DC659D93273C163400F67A5B /* ObjectDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC659D95273C163400F67A5B /* ObjectDetailsViewController.xib in Resources */,
 				DC659D3C273BF75900F67A5B /* LaunchScreen.storyboard in Resources */,
 				DC659D39273BF75900F67A5B /* Assets.xcassets in Resources */,
 			);
@@ -470,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC659D94273C163400F67A5B /* ObjectDetailsViewController.swift in Sources */,
 				DC659D82273C060800F67A5B /* Environment.swift in Sources */,
 				DC659D6C273BFEAF00F67A5B /* SearchViewController.swift in Sources */,
 				DC659D6F273C031700F67A5B /* SearchResult.swift in Sources */,
@@ -484,6 +495,7 @@
 				DC659D86273C0A1800F67A5B /* DataState.swift in Sources */,
 				DC659D8D273C0A2200F67A5B /* UIView+Extensions.swift in Sources */,
 				DC659D8E273C0A2200F67A5B /* UIView+AutoLayout.swift in Sources */,
+				DC659D91273C0A9700F67A5B /* SearchViewModel.swift in Sources */,
 				DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */,
 				DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */,
 			);

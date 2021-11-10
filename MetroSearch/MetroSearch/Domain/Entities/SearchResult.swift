@@ -9,5 +9,5 @@ import Foundation
 
 struct SearchResult: Codable {
     var total: Int
-    var objectIDs: [Int]
+    var objectIDs: [Int]?
 }

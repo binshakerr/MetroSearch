@@ -23,7 +23,7 @@ extension EndPoint {
     
     func makeURLRequest() throws -> URLRequest {
         // URL
-        let url = try Environment.baseURL.asURL()
+        let url = try Environment.apiURL.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
         // HTTP Method
