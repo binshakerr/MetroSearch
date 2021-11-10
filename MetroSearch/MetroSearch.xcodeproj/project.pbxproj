@@ -16,6 +16,14 @@
 		DC659D6C273BFEAF00F67A5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D6B273BFEAF00F67A5B /* SearchViewController.swift */; };
 		DC659D6F273C031700F67A5B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D6E273C031700F67A5B /* SearchResult.swift */; };
 		DC659D71273C037C00F67A5B /* MuseumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D70273C037C00F67A5B /* MuseumItem.swift */; };
+		DC659D73273C057500F67A5B /* ObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D72273C057500F67A5B /* ObjectService.swift */; };
+		DC659D7C273C05D500F67A5B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D77273C05D500F67A5B /* Enums.swift */; };
+		DC659D7D273C05D500F67A5B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D78273C05D500F67A5B /* NetworkManager.swift */; };
+		DC659D7E273C05D500F67A5B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D79273C05D500F67A5B /* NetworkLogger.swift */; };
+		DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D7A273C05D500F67A5B /* NetworkReachability.swift */; };
+		DC659D80273C05D500F67A5B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D7B273C05D500F67A5B /* EndPoint.swift */; };
+		DC659D82273C060800F67A5B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D81273C060800F67A5B /* Environment.swift */; };
+		DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D83273C06FF00F67A5B /* ErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		DC659D6B273BFEAF00F67A5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DC659D6E273C031700F67A5B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DC659D70273C037C00F67A5B /* MuseumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumItem.swift; sourceTree = "<group>"; };
+		DC659D72273C057500F67A5B /* ObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectService.swift; sourceTree = "<group>"; };
+		DC659D77273C05D500F67A5B /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		DC659D78273C05D500F67A5B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DC659D79273C05D500F67A5B /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		DC659D7A273C05D500F67A5B /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		DC659D7B273C05D500F67A5B /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		DC659D81273C060800F67A5B /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		DC659D83273C06FF00F67A5B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +147,7 @@
 		DC659D5F273BFCD800F67A5B /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D81273C060800F67A5B /* Environment.swift */,
 				DC659D2F273BF75700F67A5B /* AppDelegate.swift */,
 				DC659D3D273BF75900F67A5B /* Info.plist */,
 			);
@@ -140,6 +157,7 @@
 		DC659D60273BFCE500F67A5B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D72273C057500F67A5B /* ObjectService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -155,6 +173,7 @@
 		DC659D62273BFD0C00F67A5B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D76273C05D500F67A5B /* Networking */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -229,8 +248,21 @@
 			children = (
 				DC659D6E273C031700F67A5B /* SearchResult.swift */,
 				DC659D70273C037C00F67A5B /* MuseumItem.swift */,
+				DC659D83273C06FF00F67A5B /* ErrorResponse.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		DC659D76273C05D500F67A5B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC659D77273C05D500F67A5B /* Enums.swift */,
+				DC659D78273C05D500F67A5B /* NetworkManager.swift */,
+				DC659D79273C05D500F67A5B /* NetworkLogger.swift */,
+				DC659D7A273C05D500F67A5B /* NetworkReachability.swift */,
+				DC659D7B273C05D500F67A5B /* EndPoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +450,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC659D82273C060800F67A5B /* Environment.swift in Sources */,
 				DC659D6C273BFEAF00F67A5B /* SearchViewController.swift in Sources */,
 				DC659D6F273C031700F67A5B /* SearchResult.swift in Sources */,
+				DC659D73273C057500F67A5B /* ObjectService.swift in Sources */,
+				DC659D80273C05D500F67A5B /* EndPoint.swift in Sources */,
+				DC659D7D273C05D500F67A5B /* NetworkManager.swift in Sources */,
+				DC659D7C273C05D500F67A5B /* Enums.swift in Sources */,
+				DC659D7E273C05D500F67A5B /* NetworkLogger.swift in Sources */,
 				DC659D71273C037C00F67A5B /* MuseumItem.swift in Sources */,
 				DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */,
+				DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */,
+				DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
