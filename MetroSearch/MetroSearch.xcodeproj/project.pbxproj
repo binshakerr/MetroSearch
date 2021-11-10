@@ -24,6 +24,10 @@
 		DC659D80273C05D500F67A5B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D7B273C05D500F67A5B /* EndPoint.swift */; };
 		DC659D82273C060800F67A5B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D81273C060800F67A5B /* Environment.swift */; };
 		DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D83273C06FF00F67A5B /* ErrorResponse.swift */; };
+		DC659D86273C0A1800F67A5B /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D85273C0A1800F67A5B /* DataState.swift */; };
+		DC659D8C273C0A2200F67A5B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D88273C0A2200F67A5B /* UIViewController+Extensions.swift */; };
+		DC659D8D273C0A2200F67A5B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D89273C0A2200F67A5B /* UIView+Extensions.swift */; };
+		DC659D8E273C0A2200F67A5B /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D8A273C0A2200F67A5B /* UIView+AutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		DC659D7B273C05D500F67A5B /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		DC659D81273C060800F67A5B /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		DC659D83273C06FF00F67A5B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		DC659D85273C0A1800F67A5B /* DataState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
+		DC659D88273C0A2200F67A5B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		DC659D89273C0A2200F67A5B /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DC659D8A273C0A2200F67A5B /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +198,8 @@
 		DC659D64273BFD1F00F67A5B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D87273C0A2200F67A5B /* Extensions */,
+				DC659D85273C0A1800F67A5B /* DataState.swift */,
 				DC659D38273BF75900F67A5B /* Assets.xcassets */,
 				DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */,
 			);
@@ -263,6 +273,16 @@
 				DC659D7B273C05D500F67A5B /* EndPoint.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC659D87273C0A2200F67A5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC659D88273C0A2200F67A5B /* UIViewController+Extensions.swift */,
+				DC659D89273C0A2200F67A5B /* UIView+Extensions.swift */,
+				DC659D8A273C0A2200F67A5B /* UIView+AutoLayout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +480,10 @@
 				DC659D7E273C05D500F67A5B /* NetworkLogger.swift in Sources */,
 				DC659D71273C037C00F67A5B /* MuseumItem.swift in Sources */,
 				DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */,
+				DC659D8C273C0A2200F67A5B /* UIViewController+Extensions.swift in Sources */,
+				DC659D86273C0A1800F67A5B /* DataState.swift in Sources */,
+				DC659D8D273C0A2200F67A5B /* UIView+Extensions.swift in Sources */,
+				DC659D8E273C0A2200F67A5B /* UIView+AutoLayout.swift in Sources */,
 				DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */,
 				DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */,
 			);
