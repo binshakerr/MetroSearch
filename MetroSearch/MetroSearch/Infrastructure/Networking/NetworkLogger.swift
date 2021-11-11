@@ -1,16 +1,15 @@
 //
 //  NetworkLogger.swift
-//  UGU
+//  MetroSearch
 //
 //  Created by Eslam Shaker on 07/03/2021.
-//  Copyright © 2021 Human Soft Solution. All rights reserved.
 //
 
 import Alamofire
 
 class NetworkLogger: EventMonitor {
     
-    let queue = DispatchQueue(label: "com.uguworld.networklogger")
+    let queue = DispatchQueue(label: "com.MetroSearch.networklogger")
     
     func requestDidFinish(_ request: Request) {
         print(request.description)

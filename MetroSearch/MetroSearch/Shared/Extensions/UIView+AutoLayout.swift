@@ -1,9 +1,8 @@
 //
 //  UIView+AutoLayout.swift
-//  UGU
+//  MetroSearch
 //
 //  Created by Eslam Shaker  on 8/17/20.
-//  Copyright © 2020 Human Soft Solution. All rights reserved.
 //
 
 import UIKit

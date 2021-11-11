@@ -1,9 +1,8 @@
 //
 //  FileDownloader.swift
-//  UGU
+//  MetroSearch
 //
-//  Created by mohamed ahmed on 4/5/20.
-//  Copyright © 2019 Abozaid. All rights reserved.
+//  Created by Eslam Shaker on 4/5/20.
 //
 
 import Alamofire

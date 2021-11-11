@@ -19,6 +19,8 @@ protocol SearchViewModelOutputs: AnyObject {
     var screenTitle: String { get }
     var cellIdentifier: String { get }
     var searchControllerPlaceHolder: String { get }
+    var noResultsText: String { get }
+    func getIDForObjectAt(_ index: Int) -> Int
 }
 
 

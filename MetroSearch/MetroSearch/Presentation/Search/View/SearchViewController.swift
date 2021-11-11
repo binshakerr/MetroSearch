@@ -12,7 +12,7 @@ import RxCocoa
 class SearchViewController: UIViewController {
     
     //MARK: - Properties
-    private let viewModel = SearchViewModel()
+    private var viewModel: SearchViewModelProtocol!
     private let searchController = UISearchController(searchResultsController: nil)
     private let disposeBag = DisposeBag()
     
@@ -26,9 +26,14 @@ class SearchViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.textAlignment = .center
-        label.text = viewModel.noResultsText
+        label.text = viewModel.outputs.noResultsText
         return label
     }()
+    
+    convenience init(viewModel: SearchViewModelProtocol){
+        self.init()
+        self.viewModel = viewModel
+    }
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -112,8 +117,9 @@ class SearchViewController: UIViewController {
     }
     
     func openPhotoDetails(_ index: Int) {
-        let id = viewModel.getIDForObjectAt(index)
-        let controller = ObjectDetailsViewController(objectID: id)
+        let id = viewModel.outputs.getIDForObjectAt(index)
+        let viewModel = ObjectDetailsViewModel()
+        let controller = ObjectDetailsViewController(objectID: id, viewModel: viewModel)
         navigationController?.pushViewController(controller, animated: true)
     }
     

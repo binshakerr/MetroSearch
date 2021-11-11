@@ -11,9 +11,10 @@ import RxCocoa
 
 class ObjectDetailsViewController: UIViewController {
     
-    private let viewModel = ObjectDetailsViewModel()
+    private var viewModel: ObjectDetailsViewModelProtocol!
     private let disposeBag = DisposeBag()
-    
+    private var objectID: Int!
+
     lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         collection.dataSource = self
@@ -22,11 +23,11 @@ class ObjectDetailsViewController: UIViewController {
         return collection
     }()
     
-    private var objectID: Int!
     
-    convenience init(objectID: Int){
+    convenience init(objectID: Int, viewModel: ObjectDetailsViewModelProtocol){
         self.init()
         self.objectID = objectID
+        self.viewModel = viewModel
         self.viewModel.objectID.onNext(objectID)
     }
 

@@ -1,9 +1,8 @@
 //
 //  EndPoint.swift
-//  UGU
+//  MetroSearch
 //
 //  Created by Eslam Shaker on 23/03/2021.
-//  Copyright © 2021 Human Soft Solution. All rights reserved.
 //
 
 import Alamofire
