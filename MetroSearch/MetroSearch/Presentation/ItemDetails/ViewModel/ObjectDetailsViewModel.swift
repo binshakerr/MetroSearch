@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import CoreAudio
 
 protocol ObjectDetailsViewModelInputs: AnyObject {
     var objectID: PublishSubject<Int> { get }
@@ -18,7 +19,7 @@ protocol ObjectDetailsViewModelOutputs: AnyObject {
     var errorSubject: BehaviorRelay<String?> { get }
     var imageCellIdentifier: String { get }
     var descriptionCellIdentifier: String { get }
-
+    func getURLforImageAt(_ index: IndexPath) -> URL?
 }
 
 
@@ -71,6 +72,14 @@ class ObjectDetailsViewModel: ObjectDetailsViewModelProtocol {
                 self.stateSubject.accept(.error)
                 self.errorSubject.accept(error.localizedDescription)
             }
+        }
+    }
+    
+    func getURLforImageAt(_ index: IndexPath) -> URL? {
+        if index.section == 0 {
+            return URL(string: dataSubject.value?.primaryImage ?? "")
+        } else {
+            return URL(string: dataSubject.value?.additionalImages?[index.item] ?? "")
         }
     }
     

@@ -35,6 +35,7 @@ class ObjectDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModelOutputs()
+        bindInputs()
     }
     
     func setupUI(){
@@ -84,6 +85,20 @@ class ObjectDetailsViewController: UIViewController {
                 self.collectionView.reloadData()
             })
             .disposed(by: disposeBag)
+    }
+    
+    func bindInputs(){
+        collectionView.rx.itemSelected
+            .subscribe(onNext: { [weak self] index in
+                self?.openPhotoAt(index)
+        })
+            .disposed(by: disposeBag)
+    }
+    
+    func openPhotoAt(_ index: IndexPath) {
+        guard let url = viewModel.outputs.getURLforImageAt(index) else {return}
+        let controller = PhotoDetailsViewController(imageURL: url)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }
