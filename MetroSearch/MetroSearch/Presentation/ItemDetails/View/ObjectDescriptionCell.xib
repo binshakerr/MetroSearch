@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ObjectDescriptionCell" id="gTV-IL-0wX" customClass="ObjectDescriptionCell" customModule="MetroSearch" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="432" height="545"/>
+            <rect key="frame" x="0.0" y="0.0" width="432" height="381"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="432" height="545"/>
+                <rect key="frame" x="0.0" y="0.0" width="432" height="381"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BbC-3N-qnt">
-                        <rect key="frame" x="20" y="20" width="392" height="320"/>
+                        <rect key="frame" x="20" y="20" width="392" height="341"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="TZx-gE-hG4">
                                 <rect key="frame" x="0.0" y="0.0" width="392" height="45"/>
@@ -38,7 +38,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-x6-Gnw">
-                                <rect key="frame" x="0.0" y="55" width="392" height="45"/>
+                                <rect key="frame" x="0.0" y="59" width="392" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvK-iR-f6z">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="19.5"/>
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U1Y-DO-46b">
-                                <rect key="frame" x="0.0" y="110" width="392" height="45"/>
+                                <rect key="frame" x="0.0" y="118.5" width="392" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VH-aw-6tK">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="19.5"/>
@@ -72,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-Od-jzX">
-                                <rect key="frame" x="0.0" y="165" width="392" height="45"/>
+                                <rect key="frame" x="0.0" y="177.5" width="392" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-EZ-Ccr">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="19.5"/>
@@ -89,7 +89,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="GHx-t1-Oll">
-                                <rect key="frame" x="0.0" y="220" width="392" height="45"/>
+                                <rect key="frame" x="0.0" y="237" width="392" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimensions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iti-Yg-vGB">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="19.5"/>
@@ -106,7 +106,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ke-pjx">
-                                <rect key="frame" x="0.0" y="275" width="392" height="45"/>
+                                <rect key="frame" x="0.0" y="296" width="392" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cv-tX-3QM">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="19.5"/>
@@ -130,18 +130,21 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="BbC-3N-qnt" secondAttribute="trailing" constant="20" id="IQD-9t-tSA"/>
                 <constraint firstItem="BbC-3N-qnt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="mB0-Pl-4hf"/>
+                <constraint firstAttribute="bottom" secondItem="BbC-3N-qnt" secondAttribute="bottom" constant="20" id="wfk-Yy-C7N"/>
                 <constraint firstItem="BbC-3N-qnt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="zeU-0J-CCj"/>
             </constraints>
-            <size key="customSize" width="432" height="545"/>
+            <size key="customSize" width="432" height="381"/>
             <connections>
                 <outlet property="artistBioLabel" destination="IU6-Ue-PXZ" id="cgz-22-OXo"/>
+                <outlet property="artistBioStack" destination="U1Y-DO-46b" id="vyc-3b-cCv"/>
                 <outlet property="artistNameLabel" destination="zqa-LW-lJy" id="oVf-ud-yR8"/>
+                <outlet property="artistNameStack" destination="IWG-x6-Gnw" id="Ugx-GC-FRQ"/>
                 <outlet property="dimensionsLabel" destination="HWc-gi-skd" id="lbE-ri-fa0"/>
                 <outlet property="mediumLabel" destination="Xub-AR-2S2" id="kY9-Uq-pjH"/>
                 <outlet property="objectDateLabel" destination="tIV-QO-bDN" id="WPr-aP-BTA"/>
                 <outlet property="titleLabel" destination="JX6-x9-wXY" id="UBm-Gc-8Dx"/>
             </connections>
-            <point key="canvasLocation" x="84.057971014492765" y="136.94196428571428"/>
+            <point key="canvasLocation" x="84.057971014492765" y="82.03125"/>
         </collectionViewCell>
     </objects>
 </document>
