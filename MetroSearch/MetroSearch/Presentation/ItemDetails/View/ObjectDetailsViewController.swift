@@ -14,7 +14,7 @@ class ObjectDetailsViewController: UIViewController {
     private var viewModel: ObjectDetailsViewModelProtocol!
     private let disposeBag = DisposeBag()
     private var objectID: Int!
-
+    
     lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         collection.dataSource = self
@@ -30,7 +30,7 @@ class ObjectDetailsViewController: UIViewController {
         self.viewModel = viewModel
         self.viewModel.objectID.onNext(objectID)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -53,84 +53,28 @@ class ObjectDetailsViewController: UIViewController {
     func createSectionFor(index: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         switch index {
         case 0:
-            return createFirstSection()
+            return createCompositionalSection(itemWidth: .fractionalWidth(1), itemHeight: .fractionalHeight(1), groupWidth: .fractionalWidth(1), groupHeight: .fractionalHeight(0.4))
         case 1:
-            return createSecondSection()
+            return createCompositionalSection(inset: 2.5, itemWidth: .fractionalWidth(0.4), itemHeight: .fractionalHeight(1), groupWidth: .fractionalWidth(1), groupHeight: .fractionalHeight(0.2), groupDirection: .horizontal, continuousScrolling: true, continuousScrollItemCount: 2)
         default:
-            return createThirdSection()
+            return createCompositionalSection(itemWidth: .fractionalWidth(1), itemHeight: .estimated(100), groupWidth: .fractionalWidth(1), groupHeight: .estimated(100))
         }
-    }
-    
-    func createFirstSection() -> NSCollectionLayoutSection {
-        //inset
-        let inset: CGFloat = 0
-        
-        //item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-        
-        //group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        //section
-        let section = NSCollectionLayoutSection(group: group)
-        return section
-    }
-    
-    func createSecondSection() -> NSCollectionLayoutSection {
-        //inset
-        let inset: CGFloat = 2.5
-        
-        //item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-        
-        //group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.2))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
-        
-        //section
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-        return section
-    }
-    
-    func createThirdSection() -> NSCollectionLayoutSection {
-        //inset
-        let inset: CGFloat = 2.5
-        let heightDimension = NSCollectionLayoutDimension.estimated(300)
-        
-        //item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: heightDimension)
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-        
-        //group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: heightDimension)
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        //section
-        let section = NSCollectionLayoutSection(group: group)
-        return section
     }
     
     func bindViewModelOutputs(){
         
         viewModel.outputs.stateSubject
             .subscribe(onNext:  { [weak self] state in
-            guard let self = self else { return }
-            state == .loading ? self.startLoading() : self.stopLoading()
-        })
+                guard let self = self else { return }
+                state == .loading ? self.startLoading() : self.stopLoading()
+            })
             .disposed(by: disposeBag)
         
         viewModel.outputs.errorSubject
             .subscribe(onNext:  { [weak self] message in
-            guard let self = self, let message = message else { return }
-            self.showSimpleAlert(title: "Error", message: message)
-        })
+                guard let self = self, let message = message else { return }
+                self.showSimpleAlert(title: "Error", message: message)
+            })
             .disposed(by: disposeBag)
         
         viewModel.outputs.dataSubject
@@ -139,9 +83,9 @@ class ObjectDetailsViewController: UIViewController {
                 self.navigationItem.title = object.title
                 self.collectionView.reloadData()
             })
-                    .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
-
+    
 }
 
 
