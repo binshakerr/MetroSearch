@@ -38,6 +38,13 @@
 		DC659DA3273C7BE500F67A5B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659DA2273C7BE500F67A5B /* UIImageView+Extension.swift */; };
 		DC659DA6273DC17300F67A5B /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC659DA4273DC17200F67A5B /* PhotoDetailsViewController.xib */; };
 		DC659DA7273DC17300F67A5B /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659DA5273DC17200F67A5B /* PhotoDetailsViewController.swift */; };
+		DC659DAA273DD38800F67A5B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659DA8273DD38800F67A5B /* MockURLProtocol.swift */; };
+		DC659DAB273DD38800F67A5B /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659DA9273DD38800F67A5B /* XCTestCase+Extensions.swift */; };
+		DC659DAD273DD40600F67A5B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659DAC273DD40500F67A5B /* Utils.swift */; };
+		DC659DAF273DD4AE00F67A5B /* SearchEmptyMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DAE273DD4AE00F67A5B /* SearchEmptyMock.json */; };
+		DC659DB1273DD50C00F67A5B /* SearchFullMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB0273DD50C00F67A5B /* SearchFullMock.json */; };
+		DC659DB3273E756300F67A5B /* ObjectDetailsSuccessMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB2273E756300F67A5B /* ObjectDetailsSuccessMock.json */; };
+		DC659DB5273E757700F67A5B /* ObjectDetailsFailureMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB4273E757600F67A5B /* ObjectDetailsFailureMock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +95,13 @@
 		DC659DA2273C7BE500F67A5B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		DC659DA4273DC17200F67A5B /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
 		DC659DA5273DC17200F67A5B /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		DC659DA8273DD38800F67A5B /* MockURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		DC659DA9273DD38800F67A5B /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		DC659DAC273DD40500F67A5B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DC659DAE273DD4AE00F67A5B /* SearchEmptyMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchEmptyMock.json; sourceTree = "<group>"; };
+		DC659DB0273DD50C00F67A5B /* SearchFullMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchFullMock.json; sourceTree = "<group>"; };
+		DC659DB2273E756300F67A5B /* ObjectDetailsSuccessMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ObjectDetailsSuccessMock.json; sourceTree = "<group>"; };
+		DC659DB4273E757600F67A5B /* ObjectDetailsFailureMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ObjectDetailsFailureMock.json; sourceTree = "<group>"; };
 		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				DC659D46273BF75900F67A5B /* MetroSearchTests.swift */,
+				DC659DB6273E911500F67A5B /* Helpers */,
+				DC659DB7273E912500F67A5B /* Mocks */,
 			);
 			path = MetroSearchTests;
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 				DC659D85273C0A1800F67A5B /* DataState.swift */,
 				DC659D38273BF75900F67A5B /* Assets.xcassets */,
 				DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */,
+				DC659DAC273DD40500F67A5B /* Utils.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -313,6 +330,26 @@
 				DC659DA2273C7BE500F67A5B /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC659DB6273E911500F67A5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC659DA8273DD38800F67A5B /* MockURLProtocol.swift */,
+				DC659DA9273DD38800F67A5B /* XCTestCase+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DC659DB7273E912500F67A5B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DC659DAE273DD4AE00F67A5B /* SearchEmptyMock.json */,
+				DC659DB0273DD50C00F67A5B /* SearchFullMock.json */,
+				DC659DB2273E756300F67A5B /* ObjectDetailsSuccessMock.json */,
+				DC659DB4273E757600F67A5B /* ObjectDetailsFailureMock.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +449,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC659DAF273DD4AE00F67A5B /* SearchEmptyMock.json in Resources */,
+				DC659DB1273DD50C00F67A5B /* SearchFullMock.json in Resources */,
+				DC659DB3273E756300F67A5B /* ObjectDetailsSuccessMock.json in Resources */,
+				DC659DB5273E757700F67A5B /* ObjectDetailsFailureMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +567,7 @@
 				DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */,
 				DC659DA7273DC17300F67A5B /* PhotoDetailsViewController.swift in Sources */,
 				DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */,
+				DC659DAD273DD40600F67A5B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +576,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC659D47273BF75900F67A5B /* MetroSearchTests.swift in Sources */,
+				DC659DAB273DD38800F67A5B /* XCTestCase+Extensions.swift in Sources */,
+				DC659DAA273DD38800F67A5B /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
