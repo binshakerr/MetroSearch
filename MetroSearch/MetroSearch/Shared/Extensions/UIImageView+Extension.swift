@@ -5,6 +5,7 @@
 //  Created by Eslam Shaker on 11/11/2021.
 //
 
+import UIKit
 import Kingfisher
 
 extension UIImageView {

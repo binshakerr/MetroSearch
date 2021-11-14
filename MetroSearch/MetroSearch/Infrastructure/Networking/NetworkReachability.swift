@@ -5,6 +5,7 @@
 //  Created by Eslam Shaker on 07/03/2021.
 //
 
+import Foundation
 import Alamofire
 
 class NetworkReachability {

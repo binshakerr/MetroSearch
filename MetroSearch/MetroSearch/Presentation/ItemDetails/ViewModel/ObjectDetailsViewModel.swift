@@ -5,6 +5,7 @@
 //  Created by Eslam Shaker on 10/11/2021.
 //
 
+import Foundation
 import RxSwift
 import RxCocoa
 import CoreAudio

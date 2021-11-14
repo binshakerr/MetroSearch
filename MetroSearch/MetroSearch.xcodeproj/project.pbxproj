@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005E070EE1340343A4ECDB98 /* Pods_MetroSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DAA3A067B0192F6E8A8C6F /* Pods_MetroSearch.framework */; };
-		4CE0A58BD4AF2632FC3F0AA8 /* Pods_MetroSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */; };
+		DC1C43C1274068FA00D7D2D1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C0274068FA00D7D2D1 /* IQKeyboardManagerSwift */; };
+		DC1C43C42740699300D7D2D1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */; };
+		DC1C43C62740699300D7D2D1 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C52740699300D7D2D1 /* NVActivityIndicatorViewExtended */; };
 		DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D2F273BF75700F67A5B /* AppDelegate.swift */; };
 		DC659D39273BF75900F67A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC659D38273BF75900F67A5B /* Assets.xcassets */; };
 		DC659D3C273BF75900F67A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */; };
@@ -45,6 +46,13 @@
 		DC659DB1273DD50C00F67A5B /* SearchFullMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB0273DD50C00F67A5B /* SearchFullMock.json */; };
 		DC659DB3273E756300F67A5B /* ObjectDetailsSuccessMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB2273E756300F67A5B /* ObjectDetailsSuccessMock.json */; };
 		DC659DB5273E757700F67A5B /* ObjectDetailsFailureMock.json in Resources */ = {isa = PBXBuildFile; fileRef = DC659DB4273E757600F67A5B /* ObjectDetailsFailureMock.json */; };
+		DCC186A52740666600E8C28E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DCC186A42740666600E8C28E /* Alamofire */; };
+		DCC186A82740671400E8C28E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCC186A72740671400E8C28E /* Kingfisher */; };
+		DCE06F3C2740743000B21377 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F3B2740743000B21377 /* RxBlocking */; };
+		DCE06F3E2740743000B21377 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F3D2740743000B21377 /* RxCocoa */; };
+		DCE06F402740743000B21377 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F3F2740743000B21377 /* RxRelay */; };
+		DCE06F422740743000B21377 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F412740743000B21377 /* RxSwift */; };
+		DCE06F442740743000B21377 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F432740743000B21377 /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +66,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		698C9F6741F3D316F6D8D81C /* Pods-MetroSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-MetroSearchTests/Pods-MetroSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		87DAA3A067B0192F6E8A8C6F /* Pods_MetroSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF87C78D7CAADF4DD1DB71C7 /* Pods-MetroSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroSearch.debug.xcconfig"; path = "Target Support Files/Pods-MetroSearch/Pods-MetroSearch.debug.xcconfig"; sourceTree = "<group>"; };
-		CC117C9610F6037E101F5847 /* Pods-MetroSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroSearchTests.release.xcconfig"; path = "Target Support Files/Pods-MetroSearchTests/Pods-MetroSearchTests.release.xcconfig"; sourceTree = "<group>"; };
-		D8251365FB678E3A1340FD50 /* Pods-MetroSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroSearch.release.xcconfig"; path = "Target Support Files/Pods-MetroSearch/Pods-MetroSearch.release.xcconfig"; sourceTree = "<group>"; };
 		DC659D2C273BF75700F67A5B /* MetroSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC659D2F273BF75700F67A5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC659D38273BF75900F67A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		DC659DB0273DD50C00F67A5B /* SearchFullMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchFullMock.json; sourceTree = "<group>"; };
 		DC659DB2273E756300F67A5B /* ObjectDetailsSuccessMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ObjectDetailsSuccessMock.json; sourceTree = "<group>"; };
 		DC659DB4273E757600F67A5B /* ObjectDetailsFailureMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ObjectDetailsFailureMock.json; sourceTree = "<group>"; };
-		FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005E070EE1340343A4ECDB98 /* Pods_MetroSearch.framework in Frameworks */,
+				DCE06F422740743000B21377 /* RxSwift in Frameworks */,
+				DCC186A82740671400E8C28E /* Kingfisher in Frameworks */,
+				DC1C43C42740699300D7D2D1 /* NVActivityIndicatorView in Frameworks */,
+				DC1C43C1274068FA00D7D2D1 /* IQKeyboardManagerSwift in Frameworks */,
+				DCE06F3E2740743000B21377 /* RxCocoa in Frameworks */,
+				DC1C43C62740699300D7D2D1 /* NVActivityIndicatorViewExtended in Frameworks */,
+				DCE06F402740743000B21377 /* RxRelay in Frameworks */,
+				DCC186A52740666600E8C28E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,41 +127,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE0A58BD4AF2632FC3F0AA8 /* Pods_MetroSearchTests.framework in Frameworks */,
+				DCE06F442740743000B21377 /* RxTest in Frameworks */,
+				DCE06F3C2740743000B21377 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADF91FADB3757FBA6362710B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF87C78D7CAADF4DD1DB71C7 /* Pods-MetroSearch.debug.xcconfig */,
-				D8251365FB678E3A1340FD50 /* Pods-MetroSearch.release.xcconfig */,
-				698C9F6741F3D316F6D8D81C /* Pods-MetroSearchTests.debug.xcconfig */,
-				CC117C9610F6037E101F5847 /* Pods-MetroSearchTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		B97301034A3C9DD45BE172A2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				87DAA3A067B0192F6E8A8C6F /* Pods_MetroSearch.framework */,
-				FF82A88C5F95510441C1F987 /* Pods_MetroSearchTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DC659D23273BF75700F67A5B = {
 			isa = PBXGroup;
 			children = (
 				DC659D2E273BF75700F67A5B /* MetroSearch */,
 				DC659D45273BF75900F67A5B /* MetroSearchTests */,
 				DC659D2D273BF75700F67A5B /* Products */,
-				ADF91FADB3757FBA6362710B /* Pods */,
-				B97301034A3C9DD45BE172A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,17 +347,25 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC659D56273BF75900F67A5B /* Build configuration list for PBXNativeTarget "MetroSearch" */;
 			buildPhases = (
-				9D3CC00B1E48FF9A4E74DFF8 /* [CP] Check Pods Manifest.lock */,
 				DC659D28273BF75700F67A5B /* Sources */,
 				DC659D29273BF75700F67A5B /* Frameworks */,
 				DC659D2A273BF75700F67A5B /* Resources */,
-				9C39BA1156F829317687ECD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MetroSearch;
+			packageProductDependencies = (
+				DCC186A42740666600E8C28E /* Alamofire */,
+				DCC186A72740671400E8C28E /* Kingfisher */,
+				DC1C43C0274068FA00D7D2D1 /* IQKeyboardManagerSwift */,
+				DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */,
+				DC1C43C52740699300D7D2D1 /* NVActivityIndicatorViewExtended */,
+				DCE06F3D2740743000B21377 /* RxCocoa */,
+				DCE06F3F2740743000B21377 /* RxRelay */,
+				DCE06F412740743000B21377 /* RxSwift */,
+			);
 			productName = MetroSearch;
 			productReference = DC659D2C273BF75700F67A5B /* MetroSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -378,11 +374,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC659D59273BF75900F67A5B /* Build configuration list for PBXNativeTarget "MetroSearchTests" */;
 			buildPhases = (
-				F487F3C1DBF19A9B00EDEAA7 /* [CP] Check Pods Manifest.lock */,
 				DC659D3E273BF75900F67A5B /* Sources */,
 				DC659D3F273BF75900F67A5B /* Frameworks */,
 				DC659D40273BF75900F67A5B /* Resources */,
-				EFD0B38A991B301A85C54DF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +384,10 @@
 				DC659D44273BF75900F67A5B /* PBXTargetDependency */,
 			);
 			name = MetroSearchTests;
+			packageProductDependencies = (
+				DCE06F3B2740743000B21377 /* RxBlocking */,
+				DCE06F432740743000B21377 /* RxTest */,
+			);
 			productName = MetroSearchTests;
 			productReference = DC659D42273BF75900F67A5B /* MetroSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -414,7 +412,7 @@
 				};
 			};
 			buildConfigurationList = DC659D27273BF75700F67A5B /* Build configuration list for PBXProject "MetroSearch" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -422,6 +420,13 @@
 				Base,
 			);
 			mainGroup = DC659D23273BF75700F67A5B;
+			packageReferences = (
+				DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DCC186A62740671400E8C28E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DC1C43BF274068FA00D7D2D1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = DC659D2D273BF75700F67A5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -457,87 +462,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9C39BA1156F829317687ECD5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetroSearch/Pods-MetroSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetroSearch/Pods-MetroSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetroSearch/Pods-MetroSearch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D3CC00B1E48FF9A4E74DFF8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MetroSearch-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFD0B38A991B301A85C54DF5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetroSearchTests/Pods-MetroSearchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MetroSearchTests/Pods-MetroSearchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetroSearchTests/Pods-MetroSearchTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F487F3C1DBF19A9B00EDEAA7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MetroSearchTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC659D28273BF75700F67A5B /* Sources */ = {
@@ -640,6 +564,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -657,7 +582,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -701,6 +625,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -721,13 +646,13 @@
 		};
 		DC659D57273BF75900F67A5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF87C78D7CAADF4DD1DB71C7 /* Pods-MetroSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N455B9353D;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetroSearch/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -741,6 +666,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binshakerr.MetroSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -751,13 +677,13 @@
 		};
 		DC659D58273BF75900F67A5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8251365FB678E3A1340FD50 /* Pods-MetroSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N455B9353D;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetroSearch/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -771,6 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binshakerr.MetroSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -781,9 +708,7 @@
 		};
 		DC659D5A273BF75900F67A5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 698C9F6741F3D316F6D8D81C /* Pods-MetroSearchTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -796,6 +721,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binshakerr.MetroSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -807,9 +733,7 @@
 		};
 		DC659D5B273BF75900F67A5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC117C9610F6037E101F5847 /* Pods-MetroSearchTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -822,6 +746,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binshakerr.MetroSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -862,6 +787,102 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC1C43BF274068FA00D7D2D1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DCC186A62740671400E8C28E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC1C43C0274068FA00D7D2D1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1C43BF274068FA00D7D2D1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		DC1C43C52740699300D7D2D1 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		DCC186A42740666600E8C28E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DCC186A72740671400E8C28E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC186A62740671400E8C28E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		DCE06F3B2740743000B21377 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		DCE06F3D2740743000B21377 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DCE06F3F2740743000B21377 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DCE06F412740743000B21377 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DCE06F432740743000B21377 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC659D24273BF75700F67A5B /* Project object */;
 }

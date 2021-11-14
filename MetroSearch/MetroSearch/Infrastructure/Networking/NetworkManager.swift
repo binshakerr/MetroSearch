@@ -5,6 +5,7 @@
 //  Created by Eslam Shaker on 4/5/20.
 //
 
+import Foundation
 import Alamofire
 
 enum NetworkResult<T> {
