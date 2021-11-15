@@ -99,7 +99,7 @@ class ObjectDetailsViewController: UIViewController {
     func openPhotoAt(_ index: IndexPath) {
         guard let url = viewModel.outputs.getURLforImageAt(index) else {return}
         let controller = PhotoDetailsViewController(imageURL: url)
-        navigationController?.pushViewController(controller, animated: true)
+        present(controller, animated: true)
     }
     
 }

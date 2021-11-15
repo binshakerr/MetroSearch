@@ -11,6 +11,7 @@ class PhotoDetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailsImageView: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     
     private var imageURL: URL!
         
@@ -29,11 +30,17 @@ class PhotoDetailsViewController: UIViewController {
         scrollView.delegate = self
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 10.0
+        closeButton.makeRounded()
     }
     
     func loadPhoto(){
         detailsImageView.loadImage(url: imageURL)
     }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

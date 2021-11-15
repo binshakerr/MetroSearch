@@ -9,8 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewController" customModule="FlickSearch" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewController" customModule="MetroSearch" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="NlX-aT-tJQ" id="Hhe-74-MMN"/>
                 <outlet property="detailsImageView" destination="bHq-g5-Kyc" id="yKd-Gb-uMe"/>
                 <outlet property="scrollView" destination="v0z-P9-vmn" id="MaB-1d-QYU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0z-P9-vmn">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHq-g5-Kyc">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -35,21 +36,37 @@
                         <constraint firstAttribute="bottom" secondItem="bHq-g5-Kyc" secondAttribute="bottom" id="Me3-X4-DYS"/>
                     </constraints>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlX-aT-tJQ">
+                    <rect key="frame" x="20" y="64" width="36" height="36"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="Lv6-YC-2eH"/>
+                        <constraint firstAttribute="height" constant="36" id="yNc-be-ddc"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <buttonConfiguration key="configuration" style="plain" image="outline_close_white_24pt_1x"/>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="3zG-yQ-ZsM"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="v0z-P9-vmn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cly-6D-Ax6"/>
-                <constraint firstItem="v0z-P9-vmn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LAy-kb-wIE"/>
+                <constraint firstItem="v0z-P9-vmn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LAy-kb-wIE"/>
                 <constraint firstItem="bHq-g5-Kyc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Nfs-uE-OkI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v0z-P9-vmn" secondAttribute="bottom" id="RYa-qD-JKy"/>
+                <constraint firstAttribute="bottom" secondItem="v0z-P9-vmn" secondAttribute="bottom" id="RYa-qD-JKy"/>
+                <constraint firstItem="NlX-aT-tJQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="YHI-DD-fgg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v0z-P9-vmn" secondAttribute="trailing" id="gY1-QM-M6t"/>
+                <constraint firstItem="NlX-aT-tJQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="moq-dP-Is8"/>
                 <constraint firstItem="bHq-g5-Kyc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="qdo-f9-Poc"/>
             </constraints>
             <point key="canvasLocation" x="139" y="110"/>
         </view>
     </objects>
     <resources>
+        <image name="outline_close_white_24pt_1x" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
