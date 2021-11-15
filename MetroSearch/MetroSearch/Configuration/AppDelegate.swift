@@ -15,18 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        setMainViewController()
+        setRootViewController()
         IQKeyboardManager.shared.enable = true 
         
         return true
     }
-
-    func setMainViewController(){
-        let viewModel = SearchViewModel()
+    
+    func createSearchScreen() -> UINavigationController {
+        let repo = ObjectRepository(networkManager: NetworkManager.shared)
+        let viewModel = SearchViewModel(objectRepository: repo)
         let controller = SearchViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: controller)
+        return navigation
+    }
+
+    func setRootViewController(){
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigation
+        window?.rootViewController = createSearchScreen()
         window?.makeKeyAndVisible()
     }
 

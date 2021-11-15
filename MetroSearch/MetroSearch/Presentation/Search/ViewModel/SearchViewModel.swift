@@ -36,35 +36,38 @@ class SearchViewModel: SearchViewModelProtocol {
     var outputs: SearchViewModelOutputs { self }
     
     //MARK: - Inputs
-    var searchSubject = PublishSubject<String>()
+    let searchSubject = PublishSubject<String>()
 
 
     //MARK: - Outputs
     let cellIdentifier = "SearchCell"
     let screenTitle = "The Metropolitan Museum of Art"
     let searchControllerPlaceHolder = "Search Objects"
-    var dataSubject = BehaviorRelay<[Int]>(value: [])
-    var stateSubject = BehaviorRelay<DataState?>(value: nil)
-    var errorSubject = BehaviorRelay<String?>(value: nil)
+    let dataSubject = BehaviorRelay<[Int]>(value: [])
+    let stateSubject = BehaviorRelay<DataState?>(value: nil)
+    let errorSubject = BehaviorRelay<String?>(value: nil)
     let noResultsText = "No results found for this query!"
     
     //MARK: -
-    private var networkManager: NetworkManagerType
+    private let objectRepository: ObjectRepositoryProtocol
     private let disposeBag = DisposeBag()
     private var lastSearchedKeyword = ""
     
-    init(networkManager: NetworkManagerType = NetworkManager.shared){
-        self.networkManager = networkManager
+    init(objectRepository: ObjectRepositoryProtocol){
+        self.objectRepository = objectRepository
         bindInputs()
     }
     
     func bindInputs(){
-        inputs.searchSubject.subscribe(onNext: { [weak self] searchTerm in
-            self?.searchPhotos(keyword: searchTerm)
-        }).disposed(by: disposeBag)
+        inputs
+            .searchSubject
+            .subscribe(onNext: { [weak self] searchTerm in
+                self?.searchObjects(keyword: searchTerm)
+            })
+            .disposed(by: disposeBag)
     }
     
-    func searchPhotos(keyword: String) {
+    func searchObjects(keyword: String) {
         let text = keyword.trimmingCharacters(in: .whitespacesAndNewlines)
         guard text.count > 0 else {return}
         if keyword != self.lastSearchedKeyword {
@@ -73,18 +76,18 @@ class SearchViewModel: SearchViewModelProtocol {
         lastSearchedKeyword = keyword
         stateSubject.accept(.loading)
         
-        let request = ObjectService.searchObjects(keyword: keyword)
-        networkManager.request(request, type: SearchResult.self) { [weak self] (result, status) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
+        objectRepository
+            .searchObjects(keyword: keyword)
+            .subscribe(onNext: { [weak self] response in
+                guard let self = self else { return }
                 self.stateSubject.accept(response.total > 0 ? .populated : .empty)
                 self.dataSubject.accept(response.objectIDs ?? [])
-            case .failure(let error):
+            }, onError: { [weak self] error in
+                guard let self = self else { return }
                 self.stateSubject.accept(.error)
                 self.errorSubject.accept(error.localizedDescription)
-            }
-        }
+            })
+            .disposed(by: disposeBag)
     }
     
     func resetSearch(){

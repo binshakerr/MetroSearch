@@ -118,7 +118,8 @@ class SearchViewController: UIViewController {
     
     func openPhotoDetails(_ index: Int) {
         let id = viewModel.outputs.getIDForObjectAt(index)
-        let viewModel = ObjectDetailsViewModel()
+        let repo = ObjectRepository(networkManager: NetworkManager.shared)
+        let viewModel = ObjectDetailsViewModel(objectRepository: repo)
         let controller = ObjectDetailsViewController(objectID: id, viewModel: viewModel)
         navigationController?.pushViewController(controller, animated: true)
     }

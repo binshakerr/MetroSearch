@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import CoreAudio
 
 protocol ObjectDetailsViewModelInputs: AnyObject {
     var objectID: PublishSubject<Int> { get }
@@ -23,11 +22,11 @@ protocol ObjectDetailsViewModelOutputs: AnyObject {
     func getURLforImageAt(_ index: IndexPath) -> URL?
 }
 
-
 protocol ObjectDetailsViewModelProtocol: ObjectDetailsViewModelInputs, ObjectDetailsViewModelOutputs {
     var inputs: ObjectDetailsViewModelInputs { get }
     var outputs: ObjectDetailsViewModelOutputs { get }
 }
+
 
 class ObjectDetailsViewModel: ObjectDetailsViewModelProtocol {
     
@@ -35,45 +34,48 @@ class ObjectDetailsViewModel: ObjectDetailsViewModelProtocol {
     var outputs: ObjectDetailsViewModelOutputs { self }
     
     //MARK: - Inputs
-    var objectID = PublishSubject<Int>()
-    
-    func bindInputs(){
-        inputs.objectID.subscribe(onNext: { [weak self] id in
-            self?.getObjectDetails(id: id)
-        }).disposed(by: disposeBag)
-    }
+    let objectID = PublishSubject<Int>()
     
     //MARK: - Outputs
-    var dataSubject = BehaviorRelay<MuseumItem?>(value: nil)
-    var stateSubject = BehaviorRelay<DataState?>(value: nil)
-    var errorSubject = BehaviorRelay<String?>(value: nil)
-    var imageCellIdentifier = "ObjectImageCell"
-    var descriptionCellIdentifier = "ObjectDescriptionCell"
+    let dataSubject = BehaviorRelay<MuseumItem?>(value: nil)
+    let stateSubject = BehaviorRelay<DataState?>(value: nil)
+    let errorSubject = BehaviorRelay<String?>(value: nil)
+    let imageCellIdentifier = "ObjectImageCell"
+    let descriptionCellIdentifier = "ObjectDescriptionCell"
     
     //MARK: -     
-    private var networkManager: NetworkManagerType
+    private let objectRepository: ObjectRepositoryProtocol
     private let disposeBag = DisposeBag()
     
-    init(networkManager: NetworkManagerType = NetworkManager.shared){
-        self.networkManager = networkManager
+    init(objectRepository: ObjectRepositoryProtocol){
+        self.objectRepository = objectRepository
         bindInputs()
+    }
+    
+    func bindInputs(){
+        inputs
+            .objectID
+            .subscribe(onNext: { [weak self] id in
+                self?.getObjectDetails(id: id)
+            })
+            .disposed(by: disposeBag)
     }
     
     func getObjectDetails(id: Int) {
         stateSubject.accept(.loading)
         
-        let request = ObjectService.objectDetails(id: id)
-        networkManager.request(request, type: MuseumItem.self) { [weak self] (result, status) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
+        objectRepository
+            .getObjectDetails(id: id)
+            .subscribe(onNext: { [weak self] item in
+                guard let self = self else { return }
                 self.stateSubject.accept(.populated)
-                self.dataSubject.accept(response)
-            case .failure(let error):
+                self.dataSubject.accept(item)
+            }, onError: { [weak self] error in
+                guard let self = self else { return }
                 self.stateSubject.accept(.error)
                 self.errorSubject.accept(error.localizedDescription)
-            }
-        }
+            })
+            .disposed(by: disposeBag)
     }
     
     func getURLforImageAt(_ index: IndexPath) -> URL? {
