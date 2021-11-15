@@ -39,6 +39,7 @@ class ObjectDetailsViewController: UIViewController {
     }
     
     func setupUI(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
         view.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         collectionView.fillSuperviewSafeArea()

@@ -4,5 +4,9 @@
 <dict>
 	<key>BASE_URL</key>
 	<string>https://collectionapi.metmuseum.org</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

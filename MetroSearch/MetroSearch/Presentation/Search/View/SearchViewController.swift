@@ -54,6 +54,7 @@ class SearchViewController: UIViewController {
     //MARK: -
     func setupUI(){
         navigationItem.title = viewModel.screenTitle
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
         view.backgroundColor = .systemBackground
         view.addSubview(searchTable)
         searchTable.fillSuperviewSafeArea()
