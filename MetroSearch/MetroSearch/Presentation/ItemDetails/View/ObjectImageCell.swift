@@ -14,7 +14,7 @@ class ObjectImageCell: UICollectionViewCell {
     var imageURLString: String? {
         didSet {
             guard let url = URL(string: imageURLString ?? "") else { return }
-            objectImageView.loadImage(url: url)
+            objectImageView.loadDownsampledImage(url: url)
         }
     }
 }
