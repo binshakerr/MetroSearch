@@ -12,7 +12,7 @@ import RxCocoa
 class SearchViewController: UIViewController {
     
     //MARK: - Properties
-    private var viewModel: SearchViewModelProtocol!
+    private let viewModel: SearchViewModelProtocol
     private let searchController = UISearchController(searchResultsController: nil)
     private let disposeBag = DisposeBag()
     
@@ -30,12 +30,16 @@ class SearchViewController: UIViewController {
         return label
     }()
     
-    convenience init(viewModel: SearchViewModelProtocol){
-        self.init()
+    //MARK: - Life cycle
+    init(viewModel: SearchViewModelProtocol) {
         self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
-    //MARK: - Life cycle
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

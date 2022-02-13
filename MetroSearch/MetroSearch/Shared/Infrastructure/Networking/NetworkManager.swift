@@ -8,17 +8,11 @@
 import Foundation
 import Alamofire
 
-enum ResponseStatus {
-    case success
-    case error
-}
-
 var customSessionManager: Session = {
     let configuration = URLSessionConfiguration.af.default
     configuration.timeoutIntervalForRequest = 30
     configuration.waitsForConnectivity = true
 
-    
     let networkLogger = NetworkLogger()
     return Session(
         configuration: configuration,
@@ -26,7 +20,7 @@ var customSessionManager: Session = {
 }()
 
 protocol NetworkManagerType {
-    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void)
+    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>) -> Void)
 }
 
 class NetworkManager {
@@ -43,7 +37,7 @@ class NetworkManager {
 
 extension NetworkManager: NetworkManagerType {
     
-    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void){
+    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
         
         var dataRequest: DataRequest!
         
@@ -54,7 +48,7 @@ extension NetworkManager: NetworkManagerType {
                 NSLocalizedFailureReasonErrorKey : NSLocalizedString("Connection", value: "No Internet Connection", comment: "")
             ]
             let error = NSError(domain: "", code: 0, userInfo: userInfo)
-            completion(.failure(error), .error)
+            completion(.failure(error))
         }
         
         // 2- Validate Request
@@ -73,10 +67,9 @@ extension NetworkManager: NetworkManagerType {
                     do {
                         let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
                         let result = try JSONDecoder().decode(type.self, from: jsonData)
-                        completion(.success(result), .success)
+                        completion(.success(result))
                     } catch let error {
-                        print("error: ", error)
-                        completion(.failure(error), .error)
+                        completion(.failure(error))
                     }
                 default: // Custom error
                     do {
@@ -86,16 +79,14 @@ extension NetworkManager: NetworkManagerType {
                             NSLocalizedDescriptionKey:  NSLocalizedString("Error code: \(statusCode)", value: result.message, comment: "") ,
                         ]
                         let error = NSError(domain: "", code: 0, userInfo: userInfo)
-                        completion(.failure(error), .error)
+                        completion(.failure(error))
                     } catch let error {
-                        print("error: ", error)
-                        completion(.failure(error), .error)
+                        completion(.failure(error))
                     }
                 }
                 
             case .failure(let error):
-                print("error: ", error)
-                completion(.failure(error), .error)
+                completion(.failure(error))
             }
         }
     }

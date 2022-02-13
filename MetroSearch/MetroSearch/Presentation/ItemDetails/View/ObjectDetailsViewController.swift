@@ -11,9 +11,9 @@ import RxCocoa
 
 class ObjectDetailsViewController: UIViewController {
     
-    private var viewModel: ObjectDetailsViewModelProtocol!
+    private let viewModel: ObjectDetailsViewModelProtocol
     private let disposeBag = DisposeBag()
-    private var objectID: Int!
+    private let objectID: Int
     
     lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
@@ -23,12 +23,15 @@ class ObjectDetailsViewController: UIViewController {
         return collection
     }()
     
-    
-    convenience init(objectID: Int, viewModel: ObjectDetailsViewModelProtocol){
-        self.init()
+    init(objectID: Int, viewModel: ObjectDetailsViewModelProtocol) {
         self.objectID = objectID
         self.viewModel = viewModel
         self.viewModel.objectID.onNext(objectID)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {

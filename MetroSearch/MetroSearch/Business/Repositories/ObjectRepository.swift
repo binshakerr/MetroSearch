@@ -24,7 +24,7 @@ class ObjectRepository: ObjectRepositoryProtocol {
     func searchObjects(keyword: String) -> Observable<SearchResult> {
         return Observable.create { [weak self] observer in
             let request = ObjectService.searchObjects(keyword: keyword)
-            self?.networkManager.request(request, type: SearchResult.self) { (result, status) in
+            self?.networkManager.request(request, type: SearchResult.self) { result in
                 switch result {
                 case .success(let response):
                     observer.onNext(response)
@@ -39,7 +39,7 @@ class ObjectRepository: ObjectRepositoryProtocol {
     func getObjectDetails(id: Int) -> Observable<MuseumItem?> {
         return Observable.create { [weak self] observer in
             let request = ObjectService.objectDetails(id: id)
-            self?.networkManager.request(request, type: MuseumItem.self) { (result, status) in
+            self?.networkManager.request(request, type: MuseumItem.self) { result in
                 switch result {
                 case .success(let response):
                     observer.onNext(response)

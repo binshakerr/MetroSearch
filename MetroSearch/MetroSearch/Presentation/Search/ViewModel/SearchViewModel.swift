@@ -53,7 +53,7 @@ class SearchViewModel: SearchViewModelProtocol {
     private let disposeBag = DisposeBag()
     private var lastSearchedKeyword = ""
     
-    init(objectRepository: ObjectRepositoryProtocol){
+    init(objectRepository: ObjectRepositoryProtocol) {
         self.objectRepository = objectRepository
         bindInputs()
     }

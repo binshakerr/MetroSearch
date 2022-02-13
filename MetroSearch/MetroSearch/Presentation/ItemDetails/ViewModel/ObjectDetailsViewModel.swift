@@ -47,7 +47,7 @@ class ObjectDetailsViewModel: ObjectDetailsViewModelProtocol {
     private let objectRepository: ObjectRepositoryProtocol
     private let disposeBag = DisposeBag()
     
-    init(objectRepository: ObjectRepositoryProtocol){
+    init(objectRepository: ObjectRepositoryProtocol) {
         self.objectRepository = objectRepository
         bindInputs()
     }
