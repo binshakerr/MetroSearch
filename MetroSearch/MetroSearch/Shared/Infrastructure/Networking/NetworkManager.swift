@@ -25,12 +25,12 @@ protocol NetworkManagerType {
 
 class NetworkManager {
     
-    private let manager: Session
-    var requiresValidation: Bool?
-    static let shared = NetworkManager(manager: customSessionManager, requiresValidation: true)
+    private let session: Session
+    private let requiresValidation: Bool
+    static let shared = NetworkManager(session: customSessionManager, requiresValidation: true)
     
-    init(manager: Session, requiresValidation: Bool) {
-        self.manager = manager
+    init(session: Session, requiresValidation: Bool) {
+        self.session = session
         self.requiresValidation = requiresValidation
     }
 }
@@ -52,7 +52,7 @@ extension NetworkManager: NetworkManagerType {
         }
         
         // 2- Validate Request
-        dataRequest = (requiresValidation ?? false) ? customSessionManager.request(request).validate() : customSessionManager.request(request)
+        dataRequest = requiresValidation ? customSessionManager.request(request).validate() : customSessionManager.request(request)
         
         // 3- Parse Request
         dataRequest.responseJSON { result in
