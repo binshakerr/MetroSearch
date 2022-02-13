@@ -11,6 +11,7 @@
 		DC1C43C42740699300D7D2D1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */; };
 		DC1C43C62740699300D7D2D1 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C52740699300D7D2D1 /* NVActivityIndicatorViewExtended */; };
 		DC3738DD27B97231000521D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC3738DC27B97231000521D0 /* Alamofire */; };
+		DC3738DF27B97618000521D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3738DE27B97618000521D0 /* SceneDelegate.swift */; };
 		DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D2F273BF75700F67A5B /* AppDelegate.swift */; };
 		DC659D39273BF75900F67A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC659D38273BF75900F67A5B /* Assets.xcassets */; };
 		DC659D3C273BF75900F67A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC3738DE27B97618000521D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC659D2C273BF75700F67A5B /* MetroSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC659D2F273BF75700F67A5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC659D38273BF75900F67A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				DC659D81273C060800F67A5B /* Environment.swift */,
 				DC659D2F273BF75700F67A5B /* AppDelegate.swift */,
+				DC3738DE27B97618000521D0 /* SceneDelegate.swift */,
 				DC659D3D273BF75900F67A5B /* Info.plist */,
 			);
 			path = Configuration;
@@ -522,6 +525,7 @@
 				DC659DA3273C7BE500F67A5B /* UIImageView+Extension.swift in Sources */,
 				DC659D91273C0A9700F67A5B /* SearchViewModel.swift in Sources */,
 				DC659D7F273C05D500F67A5B /* NetworkReachability.swift in Sources */,
+				DC3738DF27B97618000521D0 /* SceneDelegate.swift in Sources */,
 				DC659DA7273DC17300F67A5B /* PhotoDetailsViewController.swift in Sources */,
 				DC659D84273C06FF00F67A5B /* ErrorResponse.swift in Sources */,
 				DC659DAD273DD40600F67A5B /* Utils.swift in Sources */,
