@@ -10,6 +10,7 @@
 		DC1C43C1274068FA00D7D2D1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C0274068FA00D7D2D1 /* IQKeyboardManagerSwift */; };
 		DC1C43C42740699300D7D2D1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */; };
 		DC1C43C62740699300D7D2D1 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = DC1C43C52740699300D7D2D1 /* NVActivityIndicatorViewExtended */; };
+		DC3738DD27B97231000521D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC3738DC27B97231000521D0 /* Alamofire */; };
 		DC659D30273BF75700F67A5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC659D2F273BF75700F67A5B /* AppDelegate.swift */; };
 		DC659D39273BF75900F67A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC659D38273BF75900F67A5B /* Assets.xcassets */; };
 		DC659D3C273BF75900F67A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC659D3A273BF75900F67A5B /* LaunchScreen.storyboard */; };
@@ -49,7 +50,6 @@
 		DC6768F02741D6ED00951E16 /* ObjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6768EF2741D6ED00951E16 /* ObjectRepository.swift */; };
 		DC6768F22741D77A00951E16 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6768F12741D77A00951E16 /* MockError.swift */; };
 		DC6768F52741D82800951E16 /* MockObjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6768F42741D82800951E16 /* MockObjectRepository.swift */; };
-		DCC186A52740666600E8C28E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DCC186A42740666600E8C28E /* Alamofire */; };
 		DCC186A82740671400E8C28E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCC186A72740671400E8C28E /* Kingfisher */; };
 		DCE06F3C2740743000B21377 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F3B2740743000B21377 /* RxBlocking */; };
 		DCE06F3E2740743000B21377 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCE06F3D2740743000B21377 /* RxCocoa */; };
@@ -119,13 +119,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE06F422740743000B21377 /* RxSwift in Frameworks */,
+				DC3738DD27B97231000521D0 /* Alamofire in Frameworks */,
 				DCC186A82740671400E8C28E /* Kingfisher in Frameworks */,
 				DC1C43C42740699300D7D2D1 /* NVActivityIndicatorView in Frameworks */,
 				DC1C43C1274068FA00D7D2D1 /* IQKeyboardManagerSwift in Frameworks */,
 				DCE06F3E2740743000B21377 /* RxCocoa in Frameworks */,
 				DC1C43C62740699300D7D2D1 /* NVActivityIndicatorViewExtended in Frameworks */,
 				DCE06F402740743000B21377 /* RxRelay in Frameworks */,
-				DCC186A52740666600E8C28E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +162,8 @@
 		DC659D2E273BF75700F67A5B /* MetroSearch */ = {
 			isa = PBXGroup;
 			children = (
-				DC659D5F273BFCD800F67A5B /* Configuration */,
-				DC659D60273BFCE500F67A5B /* Data */,
+				DC659D60273BFCE500F67A5B /* Business */,
 				DC659D61273BFCEB00F67A5B /* Domain */,
-				DC659D62273BFD0C00F67A5B /* Infrastructure */,
 				DC659D63273BFD1700F67A5B /* Presentation */,
 				DC659D64273BFD1F00F67A5B /* Shared */,
 			);
@@ -193,13 +191,13 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		DC659D60273BFCE500F67A5B /* Data */ = {
+		DC659D60273BFCE500F67A5B /* Business */ = {
 			isa = PBXGroup;
 			children = (
 				DC6768EE2741D6D000951E16 /* Services */,
 				DC6768ED2741D6C500951E16 /* Repositories */,
 			);
-			path = Data;
+			path = Business;
 			sourceTree = "<group>";
 		};
 		DC659D61273BFCEB00F67A5B /* Domain */ = {
@@ -230,6 +228,8 @@
 		DC659D64273BFD1F00F67A5B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DC659D62273BFD0C00F67A5B /* Infrastructure */,
+				DC659D5F273BFCD800F67A5B /* Configuration */,
 				DC659D87273C0A2200F67A5B /* Extensions */,
 				DC659D85273C0A1800F67A5B /* DataState.swift */,
 				DC659D38273BF75900F67A5B /* Assets.xcassets */,
@@ -390,7 +390,6 @@
 			);
 			name = MetroSearch;
 			packageProductDependencies = (
-				DCC186A42740666600E8C28E /* Alamofire */,
 				DCC186A72740671400E8C28E /* Kingfisher */,
 				DC1C43C0274068FA00D7D2D1 /* IQKeyboardManagerSwift */,
 				DC1C43C32740699300D7D2D1 /* NVActivityIndicatorView */,
@@ -398,6 +397,7 @@
 				DCE06F3D2740743000B21377 /* RxCocoa */,
 				DCE06F3F2740743000B21377 /* RxRelay */,
 				DCE06F412740743000B21377 /* RxSwift */,
+				DC3738DC27B97231000521D0 /* Alamofire */,
 			);
 			productName = MetroSearch;
 			productReference = DC659D2C273BF75700F67A5B /* MetroSearch.app */;
@@ -454,11 +454,11 @@
 			);
 			mainGroup = DC659D23273BF75700F67A5B;
 			packageReferences = (
-				DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DCC186A62740671400E8C28E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				DC1C43BF274068FA00D7D2D1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 				DCE06F3A2740743000B21377 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DC3738DB27B97231000521D0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DC659D2D273BF75700F67A5B /* Products */;
 			projectDirPath = "";
@@ -691,7 +691,7 @@
 				DEVELOPMENT_TEAM = N455B9353D;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MetroSearch/Configuration/Info.plist;
+				INFOPLIST_FILE = MetroSearch/Shared/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -722,7 +722,7 @@
 				DEVELOPMENT_TEAM = N455B9353D;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MetroSearch/Configuration/Info.plist;
+				INFOPLIST_FILE = MetroSearch/Shared/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -842,7 +842,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		DC3738DB27B97231000521D0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -884,9 +884,9 @@
 			package = DC1C43C22740699300D7D2D1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorViewExtended;
 		};
-		DCC186A42740666600E8C28E /* Alamofire */ = {
+		DC3738DC27B97231000521D0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCC186A32740666600E8C28E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = DC3738DB27B97231000521D0 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		DCC186A72740671400E8C28E /* Kingfisher */ = {

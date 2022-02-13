@@ -8,11 +8,6 @@
 import Foundation
 import Alamofire
 
-enum NetworkResult<T> {
-    case success(T)
-    case failure(String)
-}
-
 enum ResponseStatus {
     case success
     case error
@@ -31,7 +26,7 @@ var customSessionManager: Session = {
 }()
 
 protocol NetworkManagerType {
-    func request<T:Codable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void)
+    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void)
 }
 
 class NetworkManager {
@@ -48,7 +43,7 @@ class NetworkManager {
 
 extension NetworkManager: NetworkManagerType {
     
-    func request<T:Codable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void){
+    func request<T: Decodable>(_ request: URLRequestConvertible, type: T.Type, completion: @escaping(Result<T, Error>, ResponseStatus) -> Void){
         
         var dataRequest: DataRequest!
         

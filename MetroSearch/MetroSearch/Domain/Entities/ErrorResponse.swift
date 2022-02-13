@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ErrorResponse: Codable {
+struct ErrorResponse: Decodable {
     var message: String
 }

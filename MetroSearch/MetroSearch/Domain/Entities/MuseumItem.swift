@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MuseumItem: Codable {
+struct MuseumItem: Decodable {
     var objectID: Int
     var primaryImage: String?
     var primaryImageSmall: String?

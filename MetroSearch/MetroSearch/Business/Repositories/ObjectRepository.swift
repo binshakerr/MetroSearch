@@ -17,7 +17,7 @@ class ObjectRepository: ObjectRepositoryProtocol {
  
     private let networkManager: NetworkManagerType
  
-    init(networkManager: NetworkManagerType = NetworkManager.shared) {
+    init(networkManager: NetworkManagerType) {
         self.networkManager = networkManager
     }
     
